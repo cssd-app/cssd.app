@@ -3,594 +3,443 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediSecure AI - Surgical Instrument Reprocessing SaaS</title>
+    <title>MediSecure AI - CSSD Surgical Instrument Reprocessing SaaS</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#0ea5e9',
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        accent: {
+                            DEFAULT: '#14b8a6',
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         
-        body {
-            font-family: 'Inter', sans-serif;
+        html {
+            scroll-behavior: smooth;
         }
         
-        .hero-gradient {
-            background: linear-gradient(to bottom, #EFF6FF, #FFFFFF);
+        .gradient-bg {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
         }
         
-        .card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .feature-card {
+            transition: all 0.3s ease;
         }
         
-        .card:hover {
+        .feature-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
         
-        .chat-bubble-ai {
-            background-color: #EEF2FF;
-            border-radius: 1rem;
-            border-top-left-radius: 0;
-            padding: 1rem;
-            width: 80%;
-            margin-bottom: 1rem;
+        .workflow-step {
+            transition: all 0.3s ease;
         }
         
-        .chat-bubble-user {
-            background-color: #F3F4F6;
-            border-radius: 1rem;
-            border-top-right-radius: 0;
-            padding: 1rem;
-            width: 80%;
-            margin-left: auto;
-            margin-bottom: 1rem;
-        }
-        
-        .feature-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 3rem;
-            height: 3rem;
-            border-radius: 9999px;
-            margin-bottom: 1rem;
+        .workflow-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
     </style>
 </head>
-<body class="bg-white">
-    <!-- Header -->
-    <header class="sticky top-0 z-40 w-full border-b bg-white bg-opacity-95 backdrop-blur">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex h-16 items-center justify-between">
-                <div class="flex items-center space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 200 200">
-                        <circle cx="100" cy="100" r="90" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="4"/>
-                        <rect x="85" y="50" width="30" height="100" rx="5" fill="#0ea5e9"/>
-                        <rect x="50" y="85" width="100" height="30" rx="5" fill="#0ea5e9"/>
-                        <circle cx="100" cy="100" r="70" fill="none" stroke="#0f766e" stroke-width="3" stroke-dasharray="10,5"/>
-                        <path d="M40,40 L60,60 M140,40 L120,60 M40,160 L60,140 M140,160 L120,140" stroke="#6366f1" stroke-width="3"/>
-                        <circle cx="40" cy="40" r="5" fill="#6366f1"/>
-                        <circle cx="160" cy="40" r="5" fill="#6366f1"/>
-                        <circle cx="40" cy="160" r="5" fill="#6366f1"/>
-                        <circle cx="160" cy="160" r="5" fill="#6366f1"/>
-                        <path d="M100,30 C110,40 120,45 130,45 C140,45 145,40 150,30" stroke="#0f766e" stroke-width="3" fill="none"/>
-                    </svg>
-                    <span class="font-bold text-xl">MediSecure AI</span>
+<body class="font-sans text-gray-800 min-h-screen">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center">
+                        <img src="assets/medisecure-logo.svg" alt="MediSecure AI Logo" class="h-10 w-10 mr-2">
+                        <span class="text-primary-600 font-bold text-xl">MediSecure AI</span>
+                    </a>
                 </div>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#features" class="text-gray-700 hover:text-blue-600 font-medium">Features</a>
-                    <a href="#workflow" class="text-gray-700 hover:text-blue-600 font-medium">Workflow</a>
-                    <a href="#ai-assistant" class="text-gray-700 hover:text-blue-600 font-medium">AI Assistant</a>
-                    <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-primary-600 font-medium">Features</a>
+                    <a href="#workflow" class="text-gray-600 hover:text-primary-600 font-medium">Workflow</a>
+                    <a href="#ai-assistant" class="text-gray-600 hover:text-primary-600 font-medium">AI Assistant</a>
+                    <a href="#contact" class="text-gray-600 hover:text-primary-600 font-medium">Contact</a>
+                    <a href="#" class="bg-primary-600 text-white px-4 py-2 rounded-md font-medium hover:bg-primary-700 transition-colors">Request Demo</a>
                 </nav>
-                <div>
-                    <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md mr-2">Login</button>
-                    <button class="border border-gray-300 hover:bg-gray-100 px-4 py-2 rounded-md">Demo</button>
+                <div class="flex items-center md:hidden">
+                    <button type="button" class="text-gray-500 hover:text-gray-700 focus:outline-none">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-gradient py-20">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
-                <div class="space-y-4">
-                    <span class="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-semibold text-blue-800">
-                        HIPAA Compliant
-                    </span>
-                    <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                        Surgical Instrument Reprocessing Reimagined
+    <section class="gradient-bg py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
+                        Streamline Your CSSD Operations with AI-Powered Precision
                     </h1>
-                    <p class="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                        MediSecure AI is a comprehensive SaaS platform for multi-tenant CSSD operations, 
-                        providing real-time tracking, workflow management, and AI-powered guidance for 
-                        surgical instrument reprocessing.
+                    <p class="text-xl text-gray-700 mb-8">
+                        MediSecure AI is a comprehensive SaaS platform for managing surgical instrument reprocessing in multi-tenant CSSD environments, ensuring compliance, efficiency, and patient safety.
                     </p>
-                    <div class="flex flex-col gap-2 min-[400px]:flex-row">
-                        <button class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-md font-medium">Request Demo</button>
-                        <button class="border border-gray-300 hover:bg-gray-100 px-6 py-3 rounded-md font-medium">Learn More</button>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contact" class="bg-primary-600 text-white px-6 py-3 rounded-md font-medium hover:bg-primary-700 transition-colors text-center">
+                            Request Information
+                        </a>
+                        <a href="#features" class="bg-white text-primary-600 border border-primary-600 px-6 py-3 rounded-md font-medium hover:bg-gray-50 transition-colors text-center">
+                            Explore Features
+                        </a>
                     </div>
                 </div>
-                <div class="mx-auto lg:mr-0 lg:ml-auto">
-                    <div class="aspect-video rounded-xl bg-gray-100 overflow-hidden shadow-lg">
-                        <img 
-                            src="https://images.unsplash.com/photo-1581595219315-a187dd40c322?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3" 
-                            alt="Surgical instruments being processed" 
-                            class="object-cover w-full h-full"
-                        />
-                    </div>
+                <div class="md:w-1/2">
+                    <img src="assets/screenshots/dashboard-preview.webp" alt="MediSecure AI Dashboard" class="rounded-lg shadow-xl">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="py-16 bg-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold tracking-tighter">Key Features</h2>
-                <p class="text-gray-500 md:text-xl/relaxed mt-2">
-                    Everything you need to manage your CSSD operations efficiently
+    <!-- Key Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Comprehensive CSSD Management Solution</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    MediSecure AI combines powerful tracking capabilities with intelligent workflow management to optimize your CSSD operations.
                 </p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="card bg-white border rounded-lg p-6 shadow-sm">
-                    <div class="feature-icon bg-blue-100">
-                        <i data-lucide="stethoscope" class="w-5 h-5 text-blue-600"></i>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card bg-white rounded-lg shadow-md p-6 border border-gray-100">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-building text-primary-600 text-xl"></i>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">Multi-Tenant Support</h3>
-                    <p class="text-gray-500">
-                        Manage multiple facilities with secure data isolation and customized workflows
+                    <h3 class="text-xl font-semibold mb-2">Multi-Tenant Architecture</h3>
+                    <p class="text-gray-600">
+                        Securely manage multiple facilities or departments with complete data isolation and customized workflows for each tenant.
                     </p>
                 </div>
-                <div class="card bg-white border rounded-lg p-6 shadow-sm">
-                    <div class="feature-icon bg-teal-100">
-                        <i data-lucide="shield-check" class="w-5 h-5 text-teal-600"></i>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card bg-white rounded-lg shadow-md p-6 border border-gray-100">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-primary-600 text-xl"></i>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">HIPAA Compliant</h3>
-                    <p class="text-gray-500">
-                        Enterprise-grade security with full audit trails and role-based access control
+                    <h3 class="text-xl font-semibold mb-2">HIPAA Compliant</h3>
+                    <p class="text-gray-600">
+                        Built with security at its core, ensuring all data is encrypted, access-controlled, and fully compliant with healthcare regulations.
                     </p>
                 </div>
-                <div class="card bg-white border rounded-lg p-6 shadow-sm">
-                    <div class="feature-icon bg-indigo-100">
-                        <i data-lucide="brain" class="w-5 h-5 text-indigo-600"></i>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card bg-white rounded-lg shadow-md p-6 border border-gray-100">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-robot text-primary-600 text-xl"></i>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">AI Assistant</h3>
-                    <p class="text-gray-500">
-                        Context-aware guidance and real-time support for all workflow stages
+                    <h3 class="text-xl font-semibold mb-2">AI-Powered Assistant</h3>
+                    <p class="text-gray-600">
+                        Context-aware AI assistant that provides guidance based on workflow stage, location, and instrument-specific requirements.
                     </p>
                 </div>
-                <div class="card bg-white border rounded-lg p-6 shadow-sm">
-                    <div class="feature-icon bg-green-100">
-                        <i data-lucide="bar-chart-2" class="w-5 h-5 text-green-600"></i>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card bg-white rounded-lg shadow-md p-6 border border-gray-100">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-map-marker-alt text-primary-600 text-xl"></i>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">Advanced Analytics</h3>
-                    <p class="text-gray-500">
-                        Comprehensive reporting and insights to optimize your operations
+                    <h3 class="text-xl font-semibold mb-2">Real-Time Tracking</h3>
+                    <p class="text-gray-600">
+                        Monitor the location and status of every instrument in real-time throughout the entire reprocessing workflow.
                     </p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Workflow Section -->
-    <section id="workflow" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold tracking-tighter">Complete CSSD Workflow</h2>
-                <p class="text-gray-500 md:text-xl/relaxed mt-2">
-                    End-to-end support for all nine steps of the surgical instrument reprocessing cycle
-                </p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="card bg-white border rounded-lg p-6 shadow-sm">
-                    <span class="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-semibold text-blue-800 mb-4">
-                        Step 1-3
-                    </span>
-                    <h3 class="text-lg font-semibold mb-4">Receiving, Cleaning & Inspection</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-2 mt-0.5"></i>
-                            <span>Automated receiving with manifest verification</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-2 mt-0.5"></i>
-                            <span>Manual and automated cleaning process tracking</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-2 mt-0.5"></i>
-                            <span>Digital inspection checklists with photo documentation</span>
-                        </li>
-                    </ul>
+                
+                <!-- Feature 5 -->
+                <div class="feature-card bg-white rounded-lg shadow-md p-6 border border-gray-100">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-primary-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Advanced Analytics</h3>
+                    <p class="text-gray-600">
+                        Gain insights into processing times, compliance rates, and resource utilization with comprehensive reporting tools.
+                    </p>
                 </div>
-                <div class="card bg-white border rounded-lg p-6 shadow-sm">
-                    <span class="inline-flex items-center rounded-full bg-teal-100 px-2.5 py-0.5 text-xs font-semibold text-teal-800 mb-4">
-                        Step 4-6
-                    </span>
-                    <h3 class="text-lg font-semibold mb-4">Packaging, Sterilization & Storage</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-2 mt-0.5"></i>
-                            <span>Kit assembly with barcode/RFID verification</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-2 mt-0.5"></i>
-                            <span>Sterilization cycle monitoring and validation</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-2 mt-0.5"></i>
-                            <span>Inventory management with expiration tracking</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card bg-white border rounded-lg p-6 shadow-sm">
-                    <span class="inline-flex items-center rounded-full bg-indigo-100 px-2.5 py-0.5 text-xs font-semibold text-indigo-800 mb-4">
-                        Step 7-9
-                    </span>
-                    <h3 class="text-lg font-semibold mb-4">Tracking, Delivery & Post-Use</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-2 mt-0.5"></i>
-                            <span>Real-time location tracking throughout facility</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-2 mt-0.5"></i>
-                            <span>Case cart assembly and delivery management</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-2 mt-0.5"></i>
-                            <span>Post-procedure collection and decontamination</span>
-                        </li>
-                    </ul>
+                
+                <!-- Feature 6 -->
+                <div class="feature-card bg-white rounded-lg shadow-md p-6 border border-gray-100">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-mobile-alt text-primary-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Mobile Responsive</h3>
+                    <p class="text-gray-600">
+                        Access the platform from any device with a fully responsive design that works on desktops, tablets, and smartphones.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- AI Assistant Section -->
-    <section id="ai-assistant" class="py-16 bg-indigo-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
-                <div class="space-y-4">
-                    <span class="inline-flex items-center rounded-full bg-indigo-100 px-2.5 py-0.5 text-xs font-semibold text-indigo-800">
-                        Powered by LLM
-                    </span>
-                    <h2 class="text-3xl font-bold tracking-tighter">AI-Powered Assistant</h2>
-                    <p class="text-gray-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                        Our AI assistant provides context-aware guidance for every step of the CSSD workflow, 
-                        ensuring compliance and efficiency.
+    <section id="ai-assistant" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">AI-Powered Workflow Assistant</h2>
+                    <p class="text-xl text-gray-600 mb-6">
+                        Our advanced AI assistant provides context-aware guidance throughout the entire CSSD workflow, helping operators ensure compliance and efficiency.
                     </p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i data-lucide="brain" class="w-5 h-5 text-indigo-600 mr-2 mt-0.5"></i>
-                            <span>Preloaded with instrument specifications and procedures</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-lucide="clock" class="w-5 h-5 text-indigo-600 mr-2 mt-0.5"></i>
-                            <span>Real-time process validation and error prevention</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-lucide="users" class="w-5 h-5 text-indigo-600 mr-2 mt-0.5"></i>
-                            <span>Personalized training and guidance for staff</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-lucide="lock" class="w-5 h-5 text-indigo-600 mr-2 mt-0.5"></i>
-                            <span>Secure conversation history for audit purposes</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="mx-auto lg:mr-0 lg:ml-auto">
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden max-w-md mx-auto">
-                        <div class="bg-indigo-500 text-white p-4">
-                            <h3 class="font-semibold text-lg">AI Assistant</h3>
-                            <p class="text-indigo-100 text-sm">Context: Sterilization Room</p>
-                        </div>
-                        <div class="p-4 space-y-4">
-                            <div class="chat-bubble-ai">
-                                <p class="text-sm">
-                                    Hello! I'm your CSSD Assistant. I can help you with instrument tracking, 
-                                    process workflows, and answer questions about sterilization procedures. 
-                                    How can I assist you today?
-                                </p>
-                                <p class="text-xs text-gray-500 mt-1">09:28 AM</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-primary-600">
+                                <i class="fas fa-brain"></i>
                             </div>
-                            <div class="chat-bubble-user">
-                                <p class="text-sm">
-                                    What's the standard sterilization procedure for orthopedic instruments?
+                            <div class="ml-3">
+                                <h3 class="text-lg font-medium text-gray-900">Context-Aware Responses</h3>
+                                <p class="mt-1 text-gray-600">
+                                    The AI adapts its guidance based on the current workflow stage, user location, and specific instruments being processed.
                                 </p>
-                                <p class="text-xs text-gray-500 mt-1">09:29 AM</p>
-                            </div>
-                            <div class="chat-bubble-ai">
-                                <p class="text-sm">
-                                    For orthopedic instruments, the standard procedure is:
-                                    <br/><br/>
-                                    1. Pre-clean with enzymatic detergent
-                                    <br/>
-                                    2. Ultrasonic cleaning for 10 minutes
-                                    <br/>
-                                    3. Rinse thoroughly with distilled water
-                                    <br/>
-                                    4. Inspect for residual soil and damage
-                                    <br/>
-                                    5. Package in appropriate wrap or container
-                                    <br/>
-                                    6. Steam sterilize at 132°C for 4 minutes
-                                    <br/><br/>
-                                    Would you like me to provide more details on any specific step?
-                                </p>
-                                <p class="text-xs text-gray-500 mt-1">09:30 AM</p>
                             </div>
                         </div>
-                        <div class="border-t p-4">
-                            <div class="flex w-full items-center space-x-2">
-                                <input type="text" placeholder="Type your message..." class="flex-1 border rounded-md px-3 py-2 text-sm" />
-                                <button class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-md">Send</button>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-primary-600">
+                                <i class="fas fa-book-medical"></i>
+                            </div>
+                            <div class="ml-3">
+                                <h3 class="text-lg font-medium text-gray-900">Comprehensive Knowledge Base</h3>
+                                <p class="mt-1 text-gray-600">
+                                    Access to a vast library of instrument-specific information, sterilization protocols, and best practices.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-primary-600">
+                                <i class="fas fa-history"></i>
+                            </div>
+                            <div class="ml-3">
+                                <h3 class="text-lg font-medium text-gray-900">Conversation History</h3>
+                                <p class="mt-1 text-gray-600">
+                                    The system maintains conversation history for continuity and audit purposes, ensuring complete documentation.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-primary-600">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <div class="ml-3">
+                                <h3 class="text-lg font-medium text-gray-900">Workflow Guidance</h3>
+                                <p class="mt-1 text-gray-600">
+                                    Step-by-step instructions for complex procedures, helping ensure compliance with established protocols.
+                                </p>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="assets/screenshots/ai-assistant-preview.webp" alt="MediSecure AI Assistant" class="rounded-lg shadow-xl">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 items-start">
-                <div class="space-y-4">
-                    <h2 class="text-3xl font-bold tracking-tighter">Ready to Transform Your CSSD?</h2>
-                    <p class="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                        Get in touch with our team to schedule a personalized demo and discover how 
-                        MediSecure AI can optimize your surgical instrument reprocessing workflow.
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Ready to Transform Your CSSD Operations?</h2>
+                    <p class="text-xl text-gray-600 mb-6">
+                        Contact us today to learn how MediSecure AI can help your facility improve efficiency, ensure compliance, and enhance patient safety.
                     </p>
                     <div class="space-y-4">
                         <div class="flex items-start">
-                            <div class="p-2 rounded-full bg-blue-100 mr-3">
-                                <i data-lucide="stethoscope" class="w-5 h-5 text-blue-600"></i>
+                            <div class="flex-shrink-0 h-6 w-6 text-primary-600">
+                                <i class="fas fa-check-circle"></i>
                             </div>
-                            <div>
-                                <h3 class="font-medium">HIPAA Compliant</h3>
-                                <p class="text-gray-500">Enterprise-grade security for healthcare data</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="p-2 rounded-full bg-teal-100 mr-3">
-                                <i data-lucide="users" class="w-5 h-5 text-teal-600"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-medium">Multi-Tenant Architecture</h3>
-                                <p class="text-gray-500">Secure isolation for multiple facilities</p>
+                            <div class="ml-3">
+                                <p class="text-gray-600">
+                                    Customized demo tailored to your facility's needs
+                                </p>
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <div class="p-2 rounded-full bg-indigo-100 mr-3">
-                                <i data-lucide="brain" class="w-5 h-5 text-indigo-600"></i>
+                            <div class="flex-shrink-0 h-6 w-6 text-primary-600">
+                                <i class="fas fa-check-circle"></i>
                             </div>
-                            <div>
-                                <h3 class="font-medium">AI-Powered Guidance</h3>
-                                <p class="text-gray-500">Context-aware assistance for every step</p>
+                            <div class="ml-3">
+                                <p class="text-gray-600">
+                                    Flexible pricing options for facilities of all sizes
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-primary-600">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-gray-600">
+                                    Comprehensive implementation and training support
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-primary-600">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-gray-600">
+                                    Dedicated customer success manager
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <div class="bg-white border rounded-lg shadow-sm overflow-hidden">
-                        <div class="p-6 border-b">
-                            <h3 class="text-lg font-semibold">Request Information</h3>
-                            <p class="text-gray-500 text-sm">
-                                Fill out the form below and our team will get back to you within 24 hours.
-                            </p>
-                        </div>
-                        <div class="p-6 space-y-4">
-                            <form class="space-y-4">
-                                <div class="grid grid-cols-2 gap-4">
-                                    <div class="space-y-2">
-                                        <label class="text-sm font-medium">First Name</label>
-                                        <input type="text" placeholder="John" class="w-full border rounded-md px-3 py-2 text-sm" />
-                                    </div>
-                                    <div class="space-y-2">
-                                        <label class="text-sm font-medium">Last Name</label>
-                                        <input type="text" placeholder="Doe" class="w-full border rounded-md px-3 py-2 text-sm" />
-                                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200">
+                        <h3 class="text-xl font-semibold mb-4">Request Information</h3>
+                        <form>
+                            <div class="grid grid-cols-1 gap-4">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                    <input type="text" id="name" name="name" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
                                 </div>
-                                <div class="space-y-2">
-                                    <label class="text-sm font-medium">Email</label>
-                                    <input type="email" placeholder="john.doe@hospital.com" class="w-full border rounded-md px-3 py-2 text-sm" />
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                    <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
                                 </div>
-                                <div class="space-y-2">
-                                    <label class="text-sm font-medium">Organization</label>
-                                    <input type="text" placeholder="Central Hospital" class="w-full border rounded-md px-3 py-2 text-sm" />
+                                <div>
+                                    <label for="facility" class="block text-sm font-medium text-gray-700 mb-1">Facility Name</label>
+                                    <input type="text" id="facility" name="facility" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
                                 </div>
-                                <div class="space-y-2">
-                                    <label class="text-sm font-medium">Phone</label>
-                                    <input type="tel" placeholder="+1 (555) 123-4567" class="w-full border rounded-md px-3 py-2 text-sm" />
+                                <div>
+                                    <label for="role" class="block text-sm font-medium text-gray-700 mb-1">Your Role</label>
+                                    <select id="role" name="role" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                                        <option value="">Select your role</option>
+                                        <option value="cssd-manager">CSSD Manager</option>
+                                        <option value="surgical-director">Surgical Director</option>
+                                        <option value="infection-control">Infection Control</option>
+                                        <option value="administrator">Hospital Administrator</option>
+                                        <option value="other">Other</option>
+                                    </select>
                                 </div>
-                                <div class="space-y-2">
-                                    <label class="text-sm font-medium">Message</label>
-                                    <textarea 
-                                        placeholder="Tell us about your CSSD needs and challenges..."
-                                        rows="4"
-                                        class="w-full border rounded-md px-3 py-2 text-sm"
-                                    ></textarea>
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                    <textarea id="message" name="message" rows="4" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"></textarea>
                                 </div>
-                            </form>
-                        </div>
-                        <div class="p-6 border-t">
-                            <button class="w-full bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md">Submit Request</button>
-                        </div>
+                                <div>
+                                    <button type="submit" class="w-full bg-primary-600 text-white px-4 py-2 rounded-md font-medium hover:bg-primary-700 transition-colors">
+                                        Submit Request
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold tracking-tighter">Trusted by Healthcare Leaders</h2>
-                <p class="text-gray-500 md:text-xl/relaxed mt-2">
-                    See what our customers are saying about MediSecure AI
-                </p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="card bg-white border rounded-lg p-6 shadow-sm">
-                    <div class="flex items-center mb-4">
-                        <div class="mr-4">
-                            <img 
-                                src="https://randomuser.me/api/portraits/women/45.jpg" 
-                                alt="Sarah Johnson" 
-                                class="rounded-full w-12 h-12"
-                            />
-                        </div>
-                        <div>
-                            <h3 class="font-medium">Sarah Johnson</h3>
-                            <p class="text-sm text-gray-500">CSSD Manager, Memorial Hospital</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 italic">
-                        "MediSecure AI has revolutionized our CSSD operations. The real-time tracking 
-                        and AI assistant have reduced errors by 37% and improved throughput by 28%."
-                    </p>
-                </div>
-                <div class="card bg-white border rounded-lg p-6 shadow-sm">
-                    <div class="flex items-center mb-4">
-                        <div class="mr-4">
-                            <img 
-                                src="https://randomuser.me/api/portraits/men/32.jpg" 
-                                alt="Dr. Michael Chen" 
-                                class="rounded-full w-12 h-12"
-                            />
-                        </div>
-                        <div>
-                            <h3 class="font-medium">Dr. Michael Chen</h3>
-                            <p class="text-sm text-gray-500">Chief of Surgery, University Medical Center</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 italic">
-                        "The instrument tracking capabilities have eliminated delays in the OR. We always 
-                        know exactly where our instruments are and their processing status."
-                    </p>
-                </div>
-                <div class="card bg-white border rounded-lg p-6 shadow-sm">
-                    <div class="flex items-center mb-4">
-                        <div class="mr-4">
-                            <img 
-                                src="https://randomuser.me/api/portraits/women/68.jpg" 
-                                alt="Patricia Rodriguez" 
-                                class="rounded-full w-12 h-12"
-                            />
-                        </div>
-                        <div>
-                            <h3 class="font-medium">Patricia Rodriguez</h3>
-                            <p class="text-sm text-gray-500">Director of Operations, Regional Health System</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 italic">
-                        "The multi-tenant capabilities allow us to standardize processes across our 
-                        five facilities while maintaining secure data isolation. Implementation was smooth."
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="py-16 bg-blue-600 text-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold tracking-tighter mb-4">Start Optimizing Your CSSD Today</h2>
-            <p class="md:text-xl/relaxed mb-6 max-w-3xl mx-auto">
-                Join the growing number of healthcare facilities using MediSecure AI to enhance 
-                efficiency, ensure compliance, and improve patient safety.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <button class="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-md font-medium">
-                    Schedule Demo
-                </button>
-                <button class="border border-white text-white hover:bg-blue-700 px-6 py-3 rounded-md font-medium">
-                    Learn More
-                </button>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 bg-gray-900 text-gray-300">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 200 200" class="brightness-200">
-                            <circle cx="100" cy="100" r="90" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="4"/>
-                            <rect x="85" y="50" width="30" height="100" rx="5" fill="#0ea5e9"/>
-                            <rect x="50" y="85" width="100" height="30" rx="5" fill="#0ea5e9"/>
-                            <circle cx="100" cy="100" r="70" fill="none" stroke="#0f766e" stroke-width="3" stroke-dasharray="10,5"/>
-                            <path d="M40,40 L60,60 M140,40 L120,60 M40,160 L60,140 M140,160 L120,140" stroke="#6366f1" stroke-width="3"/>
-                            <circle cx="40" cy="40" r="5" fill="#6366f1"/>
-                            <circle cx="160" cy="40" r="5" fill="#6366f1"/>
-                            <circle cx="40" cy="160" r="5" fill="#6366f1"/>
-                            <circle cx="160" cy="160" r="5" fill="#6366f1"/>
-                            <path d="M100,30 C110,40 120,45 130,45 C140,45 145,40 150,30" stroke="#0f766e" stroke-width="3" fill="none"/>
-                        </svg>
-                        <span class="font-bold text-xl text-white">MediSecure AI</span>
+                    <div class="flex items-center mb-4">
+                        <img src="assets/medisecure-logo.svg" alt="MediSecure AI Logo" class="h-10 w-10 mr-2">
+                        <span class="text-white font-bold text-xl">MediSecure AI</span>
                     </div>
-                    <p class="text-gray-400">
-                        Transforming surgical instrument reprocessing with AI-powered solutions.
+                    <p class="text-gray-400 mb-4">
+                        Advanced CSSD management solution for healthcare facilities of all sizes.
                     </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
                 </div>
                 <div>
-                    <h3 class="font-medium text-white mb-4">Product</h3>
+                    <h3 class="text-lg font-semibold mb-4">Product</h3>
                     <ul class="space-y-2">
-                        <li><a href="#features" class="hover:text-white transition">Features</a></li>
-                        <li><a href="#workflow" class="hover:text-white transition">Workflow</a></li>
-                        <li><a href="#ai-assistant" class="hover:text-white transition">AI Assistant</a></li>
-                        <li><a href="#" class="hover:text-white transition">Pricing</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
+                        <li><a href="#workflow" class="text-gray-400 hover:text-white transition-colors">Workflow</a></li>
+                        <li><a href="#ai-assistant" class="text-gray-400 hover:text-white transition-colors">AI Assistant</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="font-medium text-white mb-4">Company</h3>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
-                        <li><a href="#" class="hover:text-white transition">Careers</a></li>
-                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Documentation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Support</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="font-medium text-white mb-4">Legal</h3>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
-                        <li><a href="#" class="hover:text-white transition">HIPAA Compliance</a></li>
-                        <li><a href="#" class="hover:text-white transition">Security</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400">© 2025 MediSecure AI. All rights reserved.</p>
-                <div class="flex space-x-4 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-white transition">
-                        <i data-lucide="facebook" class="w-5 h-5"></i>
-                    </a>
-                    <a href="#" class="hover:text-white transition">
-                        <i data-lucide="twitter" class="w-5 h-5"></i>
-                    </a>
-                    <a href="#" class="hover:text-white transition">
-                        <i data-lucide="github" class="w-5 h-5"></i>
-                    </a>
-                    <a href="#" class="hover:text-white transition">
-                        <i data-lucide="linkedin" class="w-5 h-5"></i>
-                    </a>
-                </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 MediSecure AI. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
+        // Simple form validation
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('#contact form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your interest! A representative will contact you shortly.');
+                    form.reset();
+                });
+            }
+        });
     </script>
 </body>
 </html>
