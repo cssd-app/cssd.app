@@ -2,21 +2,20 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>CSSD Audit Dashboard - Human-Centric &amp; Collaborative Workflows</title>
+<title>CSSD Audit Dashboard - Real-time Operational Visibility</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script type='text/javascript' nonce='5+5E9Ooa2AGX26HFsitUyg==' src='https://contribution.usercontent.google.com/h_nx2S-sxCzAmWlDaS3FyT1_DUi7mxU2G_Xj_zb1wZ3_-KgZy2IIBW59mEmyJGWMiigA_K4wYD2aOz-eCGodEqYpeS765CvNOdMXNInbvO7hXjyyb9Jc3rqHXr925YuAFjUKKkMXa72wD7AB7W1Gzdr5F6--1hRUwciDQlIISkY='></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script type='text/javascript' nonce='PY7XPkfi8o2TOmqKVA9FRw==' src='https://contribution.usercontent.google.com/d9-noeEzUWqe6A3S6GWV3bNfUWM9TpwFDifwyNGDJ3HDXZPCuvsLL-y6L-pwbvx3jnFX5njpwO2OhCiSSq5eEcLtq6QsSy85i2LzA4FDGdpnL8wyp-nzh4FcBbqTgPyvjEDDTvM9gHhehV80J3tKr702JTJ62md7T9xxk-yPE3w='></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#20B2AA","primary-dark": "#1A9C96",
-                        "background-light": "#f6f8f7","background-dark": "#1A252E","surface-dark": "#283745","border-dark": "#3C5163","text-secondary": "#A8B4C2",},
+                        "primary": "#007BFF","primary-dark": "#0056B3",
+                        "background-light": "#f6f8f7","background-dark": "#171717","surface-dark": "#282828","border-dark": "#3a3a3a","text-secondary": "#a0a0a0","text-light": "#e0e0e0",},
                     fontFamily: {
                         "display": ["Spline Sans", "sans-serif"]
                     },
@@ -29,28 +28,28 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #1A252E;}
+            background: #171717;}
         ::-webkit-scrollbar-thumb {
-            background: #3C5163;border-radius: 4px;
+            background: #3a3a3a;border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #20B2AA;}
+            background: #007BFF;}
     </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden antialiased selection:bg-primary selection:text-background-dark">
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-text-light font-display overflow-x-hidden antialiased selection:bg-primary selection:text-background-dark">
 <div class="relative flex min-h-screen flex-col">
 <header class="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-border-dark bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
 <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
 <div class="flex items-center gap-2">
 <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/20 text-primary">
-<span class="material-symbols-outlined">diversity_3</span>
+<span class="material-symbols-outlined">health_and_safety</span>
 </div>
-<span class="text-lg font-bold tracking-tight text-slate-900 dark:text-white">CSSD Connect</span>
+<span class="text-lg font-bold tracking-tight text-slate-900 dark:text-text-light">CSSD Audit</span>
 </div>
 <nav class="hidden md:flex items-center gap-8">
-<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors" href="#features">Experience</a>
-<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors" href="#benefits">Synergy</a>
-<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors" href="#modules">Solutions</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-text-secondary dark:hover:text-primary transition-colors" href="#features">Features</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-text-secondary dark:hover:text-primary transition-colors" href="#benefits">Benefits</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-text-secondary dark:hover:text-primary transition-colors" href="#modules">Modules</a>
 </nav>
 <div class="flex items-center gap-4">
 <button class="hidden sm:flex h-9 items-center justify-center rounded-full bg-primary px-4 text-sm font-bold text-background-dark transition-transform hover:scale-105 hover:bg-primary-dark">
@@ -62,60 +61,78 @@
 </div>
 </div>
 </header>
-<section class="relative overflow-hidden pt-16 pb-24 lg:pt-32 lg:pb-40">
-<div class="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-primary/10 blur-[100px]"></div>
-<div class="absolute top-1/2 right-0 h-64 w-64 rounded-full bg-primary/5 blur-[80px]"></div>
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
-<div class="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
+<section class="relative overflow-hidden py-24 lg:py-32">
+<div class="absolute inset-0 bg-gradient-to-br from-background-dark via-background-dark to-primary/5 opacity-30 pointer-events-none"></div>
+<div class="absolute -top-1/4 -right-1/4 h-[50vw] w-[50vw] rounded-full bg-primary/5 blur-[150px] opacity-20 hidden lg:block"></div>
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid gap-16 lg:grid-cols-2 lg:gap-12 items-center">
 <div class="flex flex-col items-start gap-6 max-w-2xl">
-<div class="inline-flex items-center gap-2 rounded-full border border-border-dark bg-surface-dark/50 px-3 py-1 text-xs font-medium text-primary backdrop-blur-sm">
+<div class="inline-flex items-center gap-2 rounded-full border border-border-dark bg-surface-dark px-3 py-1 text-xs font-medium text-primary">
 <span class="relative flex h-2 w-2">
 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
 <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
 </span>
-                            Enhanced Collaboration Tools
+                            v2.0 Now Available
                         </div>
-<h1 class="text-4xl font-display font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl leading-[1.1]">
-                            Empowering Your <span class="text-primary">Healthcare Team</span>
+<h1 class="text-4xl font-display font-bold tracking-tight text-slate-900 dark:text-text-light sm:text-5xl lg:text-6xl leading-[1.1] pt-4">
+                            Total Visibility for <span class="text-primary">CSSD Contracts</span>
 </h1>
 <p class="text-lg text-slate-600 dark:text-text-secondary leading-relaxed max-w-lg">
-                            Foster seamless collaboration and intuitive workflows across your CSSD operations. Designed for ease of use, ensuring every team member is aligned and effective.
+                            Track quality, manage penalties, ensure compliance. Eliminate operational blindspots and revenue loss.
                         </p>
 <div class="flex flex-wrap gap-4 pt-4">
-<button class="inline-flex h-12 items-center justify-center rounded-full bg-primary px-8 text-base font-bold text-background-dark transition-all hover:bg-primary-dark hover:shadow-[0_0_20px_rgba(32,178,170,0.3)]">
-                                Connect with Us
+<button class="inline-flex h-12 items-center justify-center rounded-full bg-primary px-8 text-base font-bold text-background-dark transition-all hover:bg-primary-dark hover:shadow-[0_0_20px_rgba(0,123,255,0.3)]">
+                                Book a Demo
                             </button>
-<button class="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-border-dark bg-surface-dark/30 px-8 text-base font-bold text-white transition-colors hover:bg-surface-dark/80">
+<button class="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-border-dark bg-surface-dark/50 px-8 text-base font-bold text-text-light transition-colors hover:bg-surface-dark/80">
 <span class="material-symbols-outlined text-xl">play_circle</span>
-                                See it in Action
+                                Watch Video
                             </button>
 </div>
-<div class="mt-8 flex items-center gap-4 text-sm text-slate-500 dark:text-slate-400">
+<div class="mt-8 flex items-center gap-4 text-sm text-slate-500 dark:text-text-secondary">
 <div class="flex -space-x-2">
-<div class="h-8 w-8 rounded-full border-2 border-background-light dark:border-background-dark bg-gray-300 bg-cover bg-center" data-alt="Healthcare professional using a tablet" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAOCo0A7X3F0OpTesYFBlZvibi1XnUlT7BJ_a8cTyXHVXi8sCc6b8p8QSxqhHp_svECGSlYo0oQssiUEODA9sS-oOWfB0Wj9aem8Twk-iGhiYZxpQ1ubs5AmIphwyz1DwJ_Ref9X-ceWNsDzOfrNagjoYpKSowMyMxRkHDQ7j5yuua2EGVFN_5scQD8UVF_274FAkS4Tau0Akc3TCcNR2-nnTYccTiFI9bXOAzSUFU6SRa4YzOFYH4LfOPXUhyuR2u6p6J1duhki5s')"></div>
-<div class="h-8 w-8 rounded-full border-2 border-background-light dark:border-background-dark bg-gray-300 bg-cover bg-center" data-alt="Doctor reviewing patient data" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAERdplrtsb4_ACXdAM1vm0-QuQJ1g9LtmAV7HzZzbxF4HB2iss6au2dVo3sFU679i5TOmOKE-PIsNseIoECVo9hLxPS8bbGnCSnd82LBkCeZhC5Uf0wOVsRkB0dIsMeAaYkf_hhVLVgXF0iF7XflPhoM_pufdjKx7Tb_1JSQ7-jutOgRS7UP1efK-Qoyf3g8KzQGJmY8W33aW48A_8lvv8I9gmqChPLaeAdu8GtD0h9N9X-v_yiW-QVSTcy6bFBULXx_-fbGiJAFk')"></div>
-<div class="h-8 w-8 rounded-full border-2 border-background-light dark:border-background-dark bg-gray-300 bg-cover bg-center" data-alt="Nurses collaborating in a hospital" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCvfb8uJNxZ2mq_Iq8F5lsyOrqQv3MbKeseHi28oittQM0evYFcRAuhE7izE6rtEdWUDS7vMyWPP5yYKSTW954YkMeu7XwxEVj0QodWY28eVzpGFZSjBv5f3cXP5kdc1DIoxXslHQjGXcosA38YRCgTNkjiu2c88rzvy8gVQ8__e9vAJrkWyNYw19uw5FJ-dNmYqR--MP_Phag0K5npjY8M3ZCyi-mNwvXNbE7A9pkxV5AvwbY42uRKOMUbDz7VlyaVSC55QmEuAyo')"></div>
+<div class="h-8 w-8 rounded-full border-2 border-background-dark bg-gray-300 bg-cover bg-center" data-alt="Portrait of a user" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAOCo0A7X3F0OpTesYFBlZvibi1XnUlT7BJ_a8cTyXHVXi8sCc6b8p8QSxqhHp_svECGSlYo0oQssiUEODA9sS-oOWfB0Wj9aem8Twk-iGhiYZxpQ1ubs5AmIphwyz1DwJ_Ref9X-ceWNsDzOfrNagjoYpKSowMyMxRkHDQ7j5yuua2EGVFN_5scQD8UVF_274FAkS4Tau0Akc3TCcNR2-nnTYccTiFI9bXOAzSUFU6SRa4YzOFYH4LfOPXUhyuR2u6p6J1duhki5s')"></div>
+<div class="h-8 w-8 rounded-full border-2 border-background-dark bg-gray-300 bg-cover bg-center" data-alt="Portrait of a user" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAERdplrtsb4_ACXdAM1vm0-QuQJ1g9LtmAV7HzZzbxF4HB2iss6au2dVo3sFU679i5TOmOKE-PIsNseIoECVo9hLxPS8bbGnCSnd82LBkCeZhC5Uf0wOVsRkB0dIsMeAaYkf_hhVLVgXF0iF7XflPhoM_pufdjKx7Tb_1JSQ7-jutOgRS7UP1efK-Qoyf3g8KzQGJmY8W33aW48A_8lvv8I9gmqChPLaeAdu8GtD0h9N9X-v_yiW-QVSTcy6bFBULXx_-fbGiJAFk')"></div>
+<div class="h-8 w-8 rounded-full border-2 border-background-dark bg-gray-300 bg-cover bg-center" data-alt="Portrait of a user" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCvfb8uJNxZ2mq_Iq8F5lsyOrqQv3MbKeseHi28oittQM0evYFcRAuhE7izE6rtEdWUDS7vMyWPP5yYKSTW954YkMeu7XwxEVj0QodWY28eVzpGFZSjBv5f3cXP5kdc1DIoxXslHQjGXcosA38YRCgTNkjiu2c88rzvy8gVQ8__e9vAJrkWyNYw19uw5FJ-dNmYqR--MP_Phag0K5npjY8M3ZCyi-mNwvXNbE7A9pkxV5AvwbY42uRKOMUbDz7VlyaVSC55QmEuAyo')"></div>
 </div>
 <p>Trusted by 50+ Healthcare Facilities</p>
 </div>
 </div>
-<div class="relative lg:ml-auto w-full max-w-[600px]">
+<div class="relative lg:ml-auto w-full max-w-[600px] mt-12 lg:mt-0">
 <div class="relative rounded-xl border border-border-dark bg-surface-dark/80 p-2 shadow-2xl backdrop-blur-sm">
 <div class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent rounded-xl pointer-events-none"></div>
 <div class="aspect-[4/3] w-full overflow-hidden rounded-lg bg-background-dark relative group">
-<div class="absolute inset-0 bg-cover bg-center opacity-90 transition-transform duration-700 group-hover:scale-105" data-alt="Healthcare professionals collaborating while reviewing dashboard on a large screen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuASyzQkXSYc_88VeDGs0IEIIT-2-MpU5_3qFFBBE50DYIAaOHOcyeTkrKFN-0NdGPTCjF_3AlAqRgR4df5c8_phKktq87Y90FZXODbpW6aEhcIZ2hLubS8bZmz8Pz9SgNyxhY8tvGmQ0RMtpGI5zlbqkzdZiabdj4k9xRUjK3hsap_0JvrRDPi0nEg_3uAs1dY6qOW5OMGf4b6pXdievNHorraFE5lPcjiXIE0KLy8WoUOQugXqmsr791EtBH8UPtxkc93nfbTKYQY')"></div>
-<div class="absolute top-4 left-4 right-4 flex gap-3">
-<div class="h-2 w-1/3 rounded-full bg-white/20"></div>
-<div class="h-2 w-1/4 rounded-full bg-white/10"></div>
+<div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,123,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,123,255,0.05)_1px,transparent_1px)] bg-[size:20px_20px] opacity-70"></div>
+<div class="absolute inset-0 flex items-center justify-center p-8">
+<div class="h-full w-full bg-surface-dark rounded-lg border border-border-dark flex flex-col p-4 shadow-xl">
+<div class="flex items-center justify-between mb-4">
+<div class="h-3 w-1/4 rounded-full bg-primary/50"></div>
+<div class="h-3 w-1/6 rounded-full bg-text-secondary/20"></div>
+</div>
+<div class="flex-grow grid grid-cols-2 gap-4">
+<div class="bg-primary/10 rounded-lg p-3 flex flex-col justify-center items-center">
+<div class="h-8 w-8 rounded-full bg-primary/20 mb-2"></div>
+<div class="h-2 w-3/4 rounded-full bg-primary/30"></div>
+</div>
+<div class="bg-surface-dark/50 rounded-lg p-3 flex flex-col justify-center items-center">
+<div class="h-8 w-8 rounded-full bg-text-secondary/10 mb-2"></div>
+<div class="h-2 w-3/4 rounded-full bg-text-secondary/20"></div>
+</div>
+<div class="col-span-2 bg-surface-dark/50 rounded-lg p-3">
+<div class="h-2 w-1/2 rounded-full bg-text-secondary/20 mb-2"></div>
+<div class="h-12 bg-primary/10 rounded-lg"></div>
+</div>
+</div>
+</div>
 </div>
 <div class="absolute bottom-4 left-4 bg-background-dark/90 backdrop-blur border border-border-dark rounded-lg p-3 shadow-lg">
 <div class="flex items-center gap-3">
 <div class="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-sm">group</span>
+<span class="material-symbols-outlined text-sm">trending_up</span>
 </div>
 <div>
-<div class="text-xs text-text-secondary">Team Collaboration</div>
-<div class="text-sm font-bold text-white">Seamless <span class="text-primary text-[10px]">+Improved</span></div>
+<div class="text-xs text-text-secondary">Efficiency</div>
+<div class="text-sm font-bold text-text-light">98.4% <span class="text-primary text-[10px]">+2.1%</span></div>
 </div>
 </div>
 </div>
@@ -123,118 +140,144 @@
 </div>
 </div>
 </div>
-</div>
-</section>
-<section class="bg-surface-dark py-24" id="features">
+</div></section>
+<section class="bg-background-dark py-24" id="features">
 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 <div class="mb-16 max-w-3xl">
-<h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                        Streamlining Workflows &amp; Enhancing <span class="text-primary">Team Synergy</span>
+<h2 class="text-3xl font-bold tracking-tight text-text-light sm:text-4xl">
+                        Stop Losing Revenue to <span class="text-primary">Blindspots</span>
 </h2>
 <p class="mt-4 text-lg text-text-secondary">
-                        Transform complex operations into intuitive, collaborative processes. We address key challenges to elevate your CSSD management.
+                        Manual workflows cause errors, lack transparency. We solve core CSSD management issues.
                     </p>
 </div>
 <div class="grid gap-6 md:grid-cols-3">
-<div class="group relative overflow-hidden rounded-2xl border border-border-dark bg-background-dark p-8 transition-all hover:border-primary/50 hover:shadow-lg">
+<div class="group relative overflow-hidden rounded-2xl border border-border-dark bg-surface-dark p-8 transition-all hover:border-primary/50 hover:shadow-lg">
 <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-red-500/10 text-red-500">
-<span class="material-symbols-outlined">person_off</span>
+<span class="material-symbols-outlined">warning</span>
 </div>
-<h3 class="mb-2 text-xl font-bold text-white">Disjointed Communication</h3>
+<h3 class="mb-2 text-xl font-bold text-text-light">Missed Penalties</h3>
 <p class="text-sm leading-relaxed text-text-secondary">
-                            Manual updates lead to information silos. Our platform centralizes communication for a unified team view.
+                            Automated detection of SLA breaches ensures full financial recovery.
                         </p>
 </div>
-<div class="group relative overflow-hidden rounded-2xl border border-border-dark bg-background-dark p-8 transition-all hover:border-primary/50 hover:shadow-lg">
+<div class="group relative overflow-hidden rounded-2xl border border-border-dark bg-surface-dark p-8 transition-all hover:border-primary/50 hover:shadow-lg">
 <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-500/10 text-yellow-500">
-<span class="material-symbols-outlined">sync_disabled</span>
+<span class="material-symbols-outlined">visibility_off</span>
 </div>
-<h3 class="mb-2 text-xl font-bold text-white">Inefficient Hand-offs</h3>
+<h3 class="mb-2 text-xl font-bold text-text-light">Opaque Metrics</h3>
 <p class="text-sm leading-relaxed text-text-secondary">
-                            Gaps in workflow impact productivity. Achieve smooth transitions with clear task assignments and real-time progress tracking.
+                            Gain instant visibility into sterilization cycles and compliance data.
                         </p>
 </div>
-<div class="group relative overflow-hidden rounded-2xl border border-border-dark bg-background-dark p-8 transition-all hover:border-primary/50 hover:shadow-lg">
+<div class="group relative overflow-hidden rounded-2xl border border-border-dark bg-surface-dark p-8 transition-all hover:border-primary/50 hover:shadow-lg">
 <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-blue-500">
-<span class="material-symbols-outlined">pending_actions</span>
+<span class="material-symbols-outlined">table_view</span>
 </div>
-<h3 class="mb-2 text-xl font-bold text-white">Manual Reporting Burden</h3>
+<h3 class="mb-2 text-xl font-bold text-text-light">Manual Errors</h3>
 <p class="text-sm leading-relaxed text-text-secondary">
-                            Reduce time spent on data collection. Automate report generation to free up your team for critical tasks.
+                            Automated data ingestion and standardized reporting eliminate human error.
                         </p>
 </div>
 </div>
 </div>
 </section>
 <section class="py-24 relative" id="modules">
-<div class="absolute inset-0 bg-background-light dark:bg-background-dark opacity-50 pointer-events-none"></div>
+<div class="absolute inset-0 bg-background-dark pointer-events-none"></div>
 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
 <div class="text-center mb-16">
-<span class="text-primary font-bold text-sm tracking-widest uppercase mb-2 block">Integrated Solutions</span>
-<h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">Core Functional Modules</h2>
+<span class="text-primary font-bold text-sm tracking-widest uppercase mb-2 block">Platform Capabilities</span>
+<h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-text-light sm:text-4xl">Core Functional Modules</h2>
 <p class="mt-4 text-lg text-slate-600 dark:text-text-secondary max-w-2xl mx-auto">
-                        Three critical pillars of CSSD management integrated into one seamless, powerful dashboard, designed for your team.
+                        Three critical pillars of CSSD management, integrated into one powerful dashboard.
                     </p>
 </div>
 <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 <div class="flex flex-col overflow-hidden rounded-2xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-border-dark shadow-sm">
-<div class="aspect-video w-full bg-slate-100 dark:bg-black/20 overflow-hidden relative">
-<div class="absolute inset-0 bg-cover bg-center transition-transform hover:scale-105 duration-500" data-alt="Healthcare team discussing data on a dashboard" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDagXXLlek8b782-bDV1spDS6dyeP_u5xHGW-owbAWWqpQcsZlF-pwciAR7J6ksE6VaLCNmHfMDgjFUy0ITbG12l4EKAj_DxC_dRCnH4XfQwNxaG8P5dda3Hhhl2O6J74cPpCj76O98eXAo_EIKcYOZUXULOWnSwJkunbxk5O4X9JTN7QMJwGpNRkyGVVIeA6ejtDpy9A6A07UzLxpP4EuQjzfejzuxdRugLMaNG2evWK5yb3cIsVZ8GSet89GZybX3KzWPfucrPBo')"></div>
-<div class="absolute bottom-3 right-3 bg-black/60 backdrop-blur px-2 py-1 rounded text-xs font-mono text-primary border border-primary/20">
-                                Real-time Insights
+<div class="aspect-video w-full bg-slate-100 dark:bg-background-dark overflow-hidden relative">
+<div class="absolute inset-0 flex items-center justify-center bg-primary/5">
+<div class="h-2/3 w-2/3 rounded-xl bg-primary/10 border border-primary/20 flex flex-col justify-end p-4">
+<div class="h-3 w-1/3 bg-primary/50 rounded-full mb-2"></div>
+<div class="h-2 w-full bg-primary/30 rounded-full"></div>
+</div>
+</div>
+<div class="absolute bottom-3 right-3 bg-surface-dark backdrop-blur px-2 py-1 rounded text-xs font-mono text-primary border border-primary/20">
+                                $24,500 Recovered
                             </div>
 </div>
 <div class="flex flex-1 flex-col p-6">
 <div class="mb-2 flex items-center gap-2 text-primary">
-<span class="material-symbols-outlined text-xl">insights</span>
-<span class="text-xs font-bold uppercase tracking-wider">Performance</span>
+<span class="material-symbols-outlined text-xl">calculate</span>
+<span class="text-xs font-bold uppercase tracking-wider">Financials</span>
 </div>
-<h3 class="mb-2 text-xl font-bold text-slate-900 dark:text-white">Intuitive Analytics</h3>
+<h3 class="mb-2 text-xl font-bold text-slate-900 dark:text-text-light">Penalty Calculator</h3>
 <p class="mb-6 flex-1 text-sm text-slate-600 dark:text-text-secondary">
-                                Easy-to-understand dashboards present key metrics. Empower your team with actionable data for better decision-making.
+                                Instantly calculate penalties, visualize recovery, automate invoice adjustments.
                             </p>
-<a class="group inline-flex items-center text-sm font-bold text-slate-900 dark:text-white hover:text-primary transition-colors" href="#">
+<a class="group inline-flex items-center text-sm font-bold text-slate-900 dark:text-text-light hover:text-primary transition-colors" href="#">
                                 Learn more
                                 <span class="material-symbols-outlined ml-1 text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
 </a>
 </div>
 </div>
 <div class="flex flex-col overflow-hidden rounded-2xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-border-dark shadow-sm">
-<div class="aspect-video w-full bg-slate-100 dark:bg-black/20 overflow-hidden relative">
-<div class="absolute inset-0 bg-cover bg-center transition-transform hover:scale-105 duration-500" data-alt="Nurses collaborating on a digital checklist" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVcNAMt3klkuEPyGi0nKoBiNLeG8xop-CcgKSS7xb1kvirvb8T6GTSa1PVjejgFw-5WCZ75JWEUKa2wcoUdNRx7HgmUZPovzdtuYk-R-PD-8uL3TdY2iciIKuaqPyulMcme_RWx0dyfUgAPYcOv_hsvBs3seF6TAPF9pcu7YHwm4H4pFLwAIN8du7HEed1tOobCxhCuROSL79VOk_IBgL2e8Fcvgk95psr0vQW8uBVslX6l9x2z-i2w1Xdm4WSi97uYfEDUjSz5Uk')"></div>
-<div class="absolute bottom-3 right-3 bg-black/60 backdrop-blur px-2 py-1 rounded text-xs font-mono text-primary border border-primary/20">
-                                Shared Progress
+<div class="aspect-video w-full bg-slate-100 dark:bg-background-dark overflow-hidden relative">
+<div class="absolute inset-0 flex items-center justify-center bg-primary/5">
+<div class="h-2/3 w-2/3 rounded-xl bg-primary/10 border border-primary/20 flex flex-col p-4 justify-between">
+<div class="flex items-center mb-2">
+<div class="h-4 w-4 rounded-full bg-primary/50 mr-2"></div>
+<div class="h-3 w-1/2 bg-primary/30 rounded-full"></div>
+</div>
+<div class="flex items-center mb-2">
+<div class="h-4 w-4 rounded-full bg-primary/50 mr-2"></div>
+<div class="h-3 w-2/3 bg-primary/30 rounded-full"></div>
+</div>
+<div class="flex items-center">
+<div class="h-4 w-4 rounded-full bg-primary/50 mr-2"></div>
+<div class="h-3 w-1/4 bg-primary/30 rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="absolute bottom-3 right-3 bg-surface-dark backdrop-blur px-2 py-1 rounded text-xs font-mono text-primary border border-primary/20">
+                                100% Compliant
                             </div>
 </div>
 <div class="flex flex-1 flex-col p-6">
 <div class="mb-2 flex items-center gap-2 text-primary">
-<span class="material-symbols-outlined text-xl">group_add</span>
-<span class="text-xs font-bold uppercase tracking-wider">Collaboration</span>
+<span class="material-symbols-outlined text-xl">verified_user</span>
+<span class="text-xs font-bold uppercase tracking-wider">Compliance</span>
 </div>
-<h3 class="mb-2 text-xl font-bold text-slate-900 dark:text-white">Shared Task Management</h3>
+<h3 class="mb-2 text-xl font-bold text-slate-900 dark:text-text-light">Quality Assurance Logs</h3>
 <p class="mb-6 flex-1 text-sm text-slate-600 dark:text-text-secondary">
-                                Assign tasks, track progress, and facilitate seamless hand-offs. Build a stronger, more connected team.
+                                Digital audit trails for every sterilization cycle. Maintain pristine records.
                             </p>
-<a class="group inline-flex items-center text-sm font-bold text-slate-900 dark:text-white hover:text-primary transition-colors" href="#">
+<a class="group inline-flex items-center text-sm font-bold text-slate-900 dark:text-text-light hover:text-primary transition-colors" href="#">
                                 Learn more
                                 <span class="material-symbols-outlined ml-1 text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
 </a>
 </div>
 </div>
 <div class="flex flex-col overflow-hidden rounded-2xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-border-dark shadow-sm">
-<div class="aspect-video w-full bg-slate-100 dark:bg-black/20 overflow-hidden relative">
-<div class="absolute inset-0 bg-cover bg-center transition-transform hover:scale-105 duration-500" data-alt="Doctor interacting with a digital interface for workflow management" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAxny847mhDo0k6cJyaAylM0yTIr8WmxPtIF717e0_cJ_JIXHdwlqUp8ZFiL4HJsILO5iB32ss8X9e-X8_jiXgv3YeeWBm3saq95ja5DgbYUah-ua6tujjGZ68IHoRZVKWa_jE020_LQ3xHptLqsAYGGNwymjt9IHoFeBQq8dkKCGZnEK6JQFtDNj2nwKm0sitadV6EG3Dsi_MUban0GOLYEPsxF2VpSP9LMoTVin_fsktVqhptX9u22ViQpV3K_4AtgOjRJiRRv_s')"></div>
+<div class="aspect-video w-full bg-slate-100 dark:bg-background-dark overflow-hidden relative">
+<div class="absolute inset-0 flex items-center justify-center bg-primary/5">
+<div class="h-2/3 w-2/3 rounded-xl bg-primary/10 border border-primary/20 p-4">
+<div class="h-3 w-2/3 bg-primary/30 rounded-full mb-4"></div>
+<div class="h-2 w-full bg-primary/20 rounded-full mb-2"></div>
+<div class="h-2 w-5/6 bg-primary/20 rounded-full mb-2"></div>
+<div class="h-2 w-3/4 bg-primary/20 rounded-full"></div>
+</div>
+</div>
 </div>
 <div class="flex flex-1 flex-col p-6">
 <div class="mb-2 flex items-center gap-2 text-primary">
-<span class="material-symbols-outlined text-xl">hub</span>
-<span class="text-xs font-bold uppercase tracking-wider">Integration</span>
+<span class="material-symbols-outlined text-xl">history_edu</span>
+<span class="text-xs font-bold uppercase tracking-wider">Management</span>
 </div>
-<h3 class="mb-2 text-xl font-bold text-slate-900 dark:text-white">Integrated Workflow Hub</h3>
+<h3 class="mb-2 text-xl font-bold text-slate-900 dark:text-text-light">Contract Lifecycle</h3>
 <p class="mb-6 flex-1 text-sm text-slate-600 dark:text-text-secondary">
-                                Centralize all operational tools and information. Reduce context switching and boost overall team efficiency.
+                                Centralize agreements. Get alerts for renewals, milestones, and expirations.
                             </p>
-<a class="group inline-flex items-center text-sm font-bold text-slate-900 dark:text-white hover:text-primary transition-colors" href="#">
+<a class="group inline-flex items-center text-sm font-bold text-slate-900 dark:text-text-light hover:text-primary transition-colors" href="#">
                                 Learn more
                                 <span class="material-symbols-outlined ml-1 text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
 </a>
@@ -247,45 +290,45 @@
 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 <div class="grid lg:grid-cols-2 gap-12 items-center">
 <div>
-<h2 class="text-3xl font-bold tracking-tight text-white mb-6">
-                            Designed for Your Dedicated Team
+<h2 class="text-3xl font-bold tracking-tight text-text-light mb-6">
+                            Built for Healthcare Leaders
                         </h2>
 <p class="text-lg text-text-secondary mb-8">
-                            Empowering CSSD professionals and healthcare leaders with intuitive tools for enhanced team performance and patient safety.
+                            For facility or finance managers, CSSD Audit Dashboard provides tailored insights.
                         </p>
 <div class="space-y-4">
 <div class="flex gap-4 p-4 rounded-xl bg-background-dark/50 border border-border-dark">
-<div class="shrink-0 h-12 w-12 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400">
-<span class="material-symbols-outlined">diversity_3</span>
+<div class="shrink-0 h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">admin_panel_settings</span>
 </div>
 <div>
-<h3 class="font-bold text-white">Team Leads &amp; Supervisors</h3>
-<p class="text-sm text-text-secondary mt-1">Orchestrate your team with clear task visibility and streamline daily operations for peak efficiency.</p>
+<h3 class="font-bold text-text-light">Hospital Administrators</h3>
+<p class="text-sm text-text-secondary mt-1">Reduce operational costs, ensure vendor accountability with automated penalty tracking.</p>
 </div>
 </div>
 <div class="flex gap-4 p-4 rounded-xl bg-background-dark/50 border border-border-dark">
-<div class="shrink-0 h-12 w-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400">
-<span class="material-symbols-outlined">healing</span>
+<div class="shrink-0 h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">medical_services</span>
 </div>
 <div>
-<h3 class="font-bold text-white">CSSD Technicians</h3>
-<p class="text-sm text-text-secondary mt-1">Access critical information instantly, reduce errors, and focus on delivering impeccable sterilization.</p>
+<h3 class="font-bold text-text-light">CSSD Managers</h3>
+<p class="text-sm text-text-secondary mt-1">Eliminate manual logging, focus on maintaining highest sterilization standards.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="relative">
-<div class="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 rounded-3xl blur-2xl opacity-50"></div>
+<div class="absolute -inset-4 bg-gradient-to-r from-primary/10 to-blue-500/10 rounded-3xl blur-2xl opacity-50"></div>
 <div class="relative rounded-2xl bg-background-dark border border-border-dark p-8">
 <div class="flex items-center justify-between mb-8">
-<h3 class="text-lg font-bold text-white">Monthly Team Performance</h3>
+<h3 class="text-lg font-bold text-text-light">Monthly Impact Report</h3>
 <span class="text-xs text-text-secondary bg-surface-dark px-2 py-1 rounded">Live Data</span>
 </div>
 <div class="space-y-6">
 <div>
 <div class="flex justify-between text-sm mb-2">
-<span class="text-text-secondary">Task Completion Rate</span>
-<span class="text-white font-medium">99.8%</span>
+<span class="text-text-secondary">SLA Compliance</span>
+<span class="text-text-light font-medium">99.8%</span>
 </div>
 <div class="h-2 w-full bg-surface-dark rounded-full overflow-hidden">
 <div class="h-full bg-primary w-[99.8%]"></div>
@@ -293,29 +336,29 @@
 </div>
 <div>
 <div class="flex justify-between text-sm mb-2">
-<span class="text-text-secondary">Cross-Team Collaboration</span>
-<span class="text-white font-medium">Excellent</span>
+<span class="text-text-secondary">Penalties Recovered</span>
+<span class="text-text-light font-medium">$12,450</span>
 </div>
 <div class="h-2 w-full bg-surface-dark rounded-full overflow-hidden">
-<div class="h-full bg-blue-500 w-[85%]"></div>
+<div class="h-full bg-primary w-[65%]"></div>
 </div>
 </div>
 <div>
 <div class="flex justify-between text-sm mb-2">
-<span class="text-text-secondary">Workflow Efficiency Score</span>
-<span class="text-white font-medium">100%</span>
+<span class="text-text-secondary">Audit Success Rate</span>
+<span class="text-text-light font-medium">100%</span>
 </div>
 <div class="h-2 w-full bg-surface-dark rounded-full overflow-hidden">
-<div class="h-full bg-purple-500 w-[100%]"></div>
+<div class="h-full bg-primary w-[100%]"></div>
 </div>
 </div>
 </div>
 <div class="mt-8 pt-6 border-t border-border-dark flex items-center gap-4">
 <div class="flex-1">
-<div class="text-2xl font-bold text-white">+24%</div>
-<div class="text-xs text-text-secondary">Productivity Increase</div>
+<div class="text-2xl font-bold text-text-light">+24%</div>
+<div class="text-xs text-text-secondary">ROI Year over Year</div>
 </div>
-<button class="shrink-0 h-10 px-4 rounded-full bg-surface-dark hover:bg-surface-dark/80 text-white text-sm font-medium border border-border-dark transition-colors">
+<button class="shrink-0 h-10 px-4 rounded-full bg-surface-dark hover:bg-surface-dark/80 text-text-light text-sm font-medium border border-border-dark transition-colors">
                                     View Full Report
                                 </button>
 </div>
@@ -327,63 +370,63 @@
 <section class="py-24 relative overflow-hidden">
 <div class="absolute inset-0 bg-primary/5"></div>
 <div class="mx-auto max-w-4xl px-4 text-center relative z-10">
-<h2 class="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl mb-6">
-                    Ready to Empower Your Team?
+<h2 class="text-4xl font-bold tracking-tight text-slate-900 dark:text-text-light sm:text-5xl mb-6">
+                    Optimize Your Operations?
                 </h2>
 <p class="text-lg text-slate-600 dark:text-text-secondary mb-10 max-w-2xl mx-auto">
-                    Join forward-thinking healthcare facilities that are building stronger teams and streamlining operations with CSSD Connect.
+                    Join healthcare facilities recovering revenue and ensuring compliance.
                 </p>
 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
 <button class="w-full sm:w-auto h-14 px-8 rounded-full bg-primary text-background-dark font-bold text-lg hover:bg-primary-dark transition-all shadow-lg hover:shadow-primary/25">
-                        Start Collaborating Now
+                        Get Started Now
                     </button>
-<button class="w-full sm:w-auto h-14 px-8 rounded-full bg-white dark:bg-surface-dark text-slate-900 dark:text-white border border-gray-200 dark:border-border-dark font-bold text-lg hover:bg-gray-50 dark:hover:bg-surface-dark/80 transition-all">
-                        Request a Demo
+<button class="w-full sm:w-auto h-14 px-8 rounded-full bg-surface-dark text-text-light border border-border-dark font-bold text-lg hover:bg-surface-dark/80 transition-all">
+                        Contact Sales
                     </button>
 </div>
 </div>
 </section>
-<footer class="bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-border-dark pt-16 pb-8">
+<footer class="bg-background-dark border-t border-border-dark pt-16 pb-8">
 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
 <div class="col-span-2 md:col-span-1">
 <div class="flex items-center gap-2 mb-4">
 <div class="flex h-6 w-6 items-center justify-center rounded bg-primary/20 text-primary">
-<span class="material-symbols-outlined text-sm">diversity_3</span>
+<span class="material-symbols-outlined text-sm">health_and_safety</span>
 </div>
-<span class="text-base font-bold text-slate-900 dark:text-white">CSSD Connect</span>
+<span class="text-base font-bold text-slate-900 dark:text-text-light">CSSD Audit</span>
 </div>
-<p class="text-sm text-slate-500 dark:text-gray-400">
-                            Empowering healthcare with transparency and collaborative control.
+<p class="text-sm text-slate-500 dark:text-text-secondary">
+                            Empowering healthcare with transparency and control.
                         </p>
 </div>
 <div>
-<h4 class="font-bold text-slate-900 dark:text-white mb-4">Product</h4>
-<ul class="space-y-2 text-sm text-slate-500 dark:text-gray-400">
+<h4 class="font-bold text-slate-900 dark:text-text-light mb-4">Product</h4>
+<ul class="space-y-2 text-sm text-slate-500 dark:text-text-secondary">
 <li><a class="hover:text-primary transition-colors" href="#">Features</a></li>
 <li><a class="hover:text-primary transition-colors" href="#">Pricing</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Success Stories</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Case Studies</a></li>
 </ul>
 </div>
 <div>
-<h4 class="font-bold text-slate-900 dark:text-white mb-4">Company</h4>
-<ul class="space-y-2 text-sm text-slate-500 dark:text-gray-400">
+<h4 class="font-bold text-slate-900 dark:text-text-light mb-4">Company</h4>
+<ul class="space-y-2 text-sm text-slate-500 dark:text-text-secondary">
 <li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
 <li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
 <li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
 </ul>
 </div>
 <div>
-<h4 class="font-bold text-slate-900 dark:text-white mb-4">Legal</h4>
-<ul class="space-y-2 text-sm text-slate-500 dark:text-gray-400">
+<h4 class="font-bold text-slate-900 dark:text-text-light mb-4">Legal</h4>
+<ul class="space-y-2 text-sm text-slate-500 dark:text-text-secondary">
 <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
 <li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
 </ul>
 </div>
 </div>
-<div class="border-t border-gray-200 dark:border-border-dark pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="border-t border-border-dark pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
 <p class="text-xs text-slate-400 dark:text-gray-500">
-                        © 2023 CSSD Connect. All rights reserved.
+                        © 2023 CSSD Audit Dashboard. All rights reserved.
                     </p>
 <div class="flex gap-4">
 <a class="text-slate-400 hover:text-primary transition-colors" href="#">
